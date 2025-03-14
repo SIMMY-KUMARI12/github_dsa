@@ -1,2 +1,2 @@
-# github_binary_search
+# github_dsa
 this is my first repository
