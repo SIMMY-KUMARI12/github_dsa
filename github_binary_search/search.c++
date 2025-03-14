@@ -15,7 +15,7 @@ int binary_search(int arr[],int n,int target)
   {
     if(arr[mid]==target)
     return mid;
-    else if(arr[mid]<target)git
+    else if(arr[mid]<target)
     { start=mid+1;
     }
     else if(arr[mid]>target)
