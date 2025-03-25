@@ -40,6 +40,7 @@ int binary_search(int arr[],int s, int e, int target)
  return -1;
 }
 
+
 int search(int arr[], int n, int target)
 { int s=0, e=n;
   long long mid=s+(e-s)/2;
@@ -63,6 +64,7 @@ int search(int arr[], int n, int target)
   return -1;
 }
 
+
 int main()
 {  int arr[]={12,14,16,17,18,20,2,4,6,7,8,9,11}; 
    int target;   
@@ -75,3 +77,60 @@ int main()
 
     return 0;
 }
+
+
+
+// // method-2 for binary search in rotated sorted array
+// int binary_search(int arr[],int s, int e, int target)
+// {
+//     long long mid=s+(e-s)/2;
+//     while(s<=e)
+//     {if(target== arr[mid])
+//     {
+//         return mid;
+//     }
+//     else if(target>arr[mid])
+//     {
+//        s=mid+1; 
+//     }
+//     else
+//     e=mid-1;
+
+//     mid=s+(e-s)/2;
+//  } 
+//  return -1;
+// }
+// int search(int arr[],int s,int e, int target)
+// { int mid=s+(e-s)/2;
+//   if(arr[s]<=arr[mid])   // means it is the sorted left part
+//    {
+//     if(arr[s]<=target && target<=arr[mid])
+//     {
+//       e=mid;
+//     }
+//     else{
+//       s=mid+1;
+//     }
+//    }
+//    else   // means right part is sorted
+//    {
+//     if(arr[mid+1]<=target && arr[e]>=target)
+//     {
+//       s=mid+1;
+//     }
+//     else
+//     {
+//       e=mid;
+//     }
+//    }
+//   return  binary_search(arr,s,e,target);
+// }
+// #include<iostream>
+// using namespace std;
+// int main()
+// { int arr[]={12,14,16,18,22,1,3,5,7,9,11};
+//   int n=sizeof(arr)/sizeof(arr[0]);
+//   int index=search(arr,0,n-1,22);
+//   cout<<"THE INDEX AT WHICH THE TARGET VALUE IS PRESENT IS:"<<index;
+//   return 0;
+// }
