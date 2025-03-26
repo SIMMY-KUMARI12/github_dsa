@@ -81,27 +81,11 @@ int main()
 
 
 // // method-2 for binary search in rotated sorted array
-// int binary_search(int arr[],int s, int e, int target)
-// {
-//     long long mid=s+(e-s)/2;
-//     while(s<=e)
-//     {if(target== arr[mid])
-//     {
-//         return mid;
-//     }
-//     else if(target>arr[mid])
-//     {
-//        s=mid+1; 
-//     }
-//     else
-//     e=mid-1;
-
-//     mid=s+(e-s)/2;
-//  } 
-//  return -1;
-// }
+// 
 // int search(int arr[],int s,int e, int target)
-// { int mid=s+(e-s)/2;
+// { 
+//  while(s<=e){
+//   int mid=s+(e-s)/2;
 //   if(arr[s]<=arr[mid])   // means it is the sorted left part
 //    {
 //     if(arr[s]<=target && target<=arr[mid])
@@ -124,6 +108,7 @@ int main()
 //     }
 //    }
 //   return  binary_search(arr,s,e,target);
+//   }
 // }
 // #include<iostream>
 // using namespace std;
