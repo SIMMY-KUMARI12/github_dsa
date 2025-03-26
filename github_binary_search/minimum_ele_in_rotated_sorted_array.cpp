@@ -6,7 +6,7 @@ int main()
 { int arr[10]={5,7,9,11,-2,-1,0,1,2,4};
   int s=0,e=9,mini=INT_MAX;
   while(s<=e)
-  {long long mid=s+(e-s)/10;
+  {int mid=s+(e-s)/10;
     if(arr[s]<=arr[mid])
     {  
       mini=min(mini,arr[s]);  
