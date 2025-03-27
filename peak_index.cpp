@@ -42,6 +42,7 @@ int find_peak(int arr[], int n)
 int main()
 {
     int arr[] = {1, 4, 6, 7, 9, 6, 4, 2,7,8,10,13,25,16,15,12,9,5,3};  //  MULTIPLE PEAK VALUES ARE - 9 & 25 
+   // int arr[]={1,5,1,2,1};
     int n = sizeof(arr) / sizeof(arr[0]);
     int peak_ele=find_peak(arr,n);
     cout<<"The peak element in the array is:"<<peak_ele;
