@@ -55,8 +55,10 @@ int mini_divisor(int arr[],int n,int threshold)
     }
     return s;
 }
+
 int main()
-{   int n;
+{
+   int n;
     cout<<" enter the number of element in the array:";
     cin>>n;
     int arr[n];
@@ -65,7 +67,9 @@ int main()
     {
         cin>>arr[i];
     }
-  int threshold=5;
+  int threshold;
+  cout<<"Enter the value of the theshold:";
+  cin>>threshold;
   int mini_div=mini_divisor(arr,n,threshold);
   cout<<"the mini divisor in the array is: "<<mini_div; 
    
