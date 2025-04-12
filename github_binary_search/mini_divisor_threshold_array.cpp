@@ -1,17 +1,6 @@
 #include<iostream>
 #include<climits>
 using namespace std;
-int minimum(int arr[],int n)
-{  int  min= INT_MAX;
-    for(int i=0;i<n;i++)
-    {
-        if(arr[i]<min)
-        {
-            min=arr[i];
-        }
-    }
-    return min;
-}
 
 int maximum(int arr[],int n)
 {  int  max= INT_MIN;
@@ -25,31 +14,33 @@ int maximum(int arr[],int n)
     return max;
 }
 
-
-bool possible(int arr[],int n,int div,int threshold)
-{    int sum=0;
+bool possible(int arr[], int n, int div,int threshold)
+{   long long int sum=0; // so that it is not more than the integer maximum value
     for(int i=0;i<n;i++)
-    {
-        if(arr[i]%div==0)
+    {   if(arr[i]%div==0)
         {
             sum+=(arr[i]/div);
         }
         else
         {
-            sum+=(arr[i]/div)+1;
+            sum+=((arr[i]/div)+1);
         }
     }
     if(sum<=threshold)
     {
         return true;
     }
-    else 
-    return false;
+    else
+    {
+        return false;
+    }
+
 }
+
 
 int mini_divisor(int arr[],int n,int threshold)
 {
-    int s= minimum(arr,n);
+    int s=1; // as the minimum divisor can be 1  
     int e=maximum(arr,n);
     while(s<=e){
         int mid=s+(e-s)/2;
@@ -65,11 +56,18 @@ int mini_divisor(int arr[],int n,int threshold)
     return s;
 }
 int main()
-{   int n=5;
-    int arr[]={44,22,33,11,1};
+{   int n;
+    cout<<" enter the number of element in the array:";
+    cin>>n;
+    int arr[n];
+    cout<<"Enter the elements of the array:";
+    for(int i=0;i<n;i++)
+    {
+        cin>>arr[i];
+    }
   int threshold=5;
   int mini_div=mini_divisor(arr,n,threshold);
-  cout<<"the mini dovisor in the array is: "<<mini_div; 
+  cout<<"the mini divisor in the array is: "<<mini_div; 
    
     return 0;
 }
