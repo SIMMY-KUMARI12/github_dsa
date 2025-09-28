@@ -1,3 +1,4 @@
 # github_dsa
-this is my first repository
-author: Simmy Kumari
+This is my first repository about data structure.
+<br>
+Author: Simmy Kumari
